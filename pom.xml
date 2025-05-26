@@ -61,11 +61,8 @@
                                 <maxVersion></maxVersion>
                                 <jdkPreference></jdkPreference>
                                 <requires64Bit></requires64Bit>
-
                             </jre>
-
                             <classPath>
-                                <!--                        <mainClass>org.example.Windows.MainWindow</mainClass>-->
                                 <mainClass>org.example.Windows.MainWindow</mainClass>
                             </classPath>
                         </configuration>

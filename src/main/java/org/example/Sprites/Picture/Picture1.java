@@ -5,18 +5,32 @@ import org.example.Windows.MainCanvas;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
 
 public class Picture1 extends Sprite {
     private float vX;
     private float vY;
     private Image pict;
+    File file;
 
     public Picture1() {
         //Долго я возился с передачей пути файла, - чтобы он и Maven читался
         InputStream fileURL = getClass().getClassLoader().getResourceAsStream("Images/DSC_0265_.JPG");
         InputStream file = fileURL;
+        //Так не работает, - ошибка: URI не является иерархическим
+//        URL fileURL = getClass().getClassLoader().getResource("Images/DSC_0265_.JPG");
+//        try {
+//            file = new File(fileURL.toURI());
+//        } catch (URISyntaxException e) {
+//            throw new RuntimeException(e);
+//        }
+
+
 //        file = new File(getProperty("user.dir") + "/src/main/resources/Images/DSC_0265_.JPG");
 
         try {

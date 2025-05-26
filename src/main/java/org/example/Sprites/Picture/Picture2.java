@@ -20,6 +20,7 @@ public class Picture2 extends Sprite {
 
     public Picture2() {
 //Долго я возился с передачей пути файла, - чтобы он и Maven читался
+        //Передача потоком
         InputStream fileURL = getClass().getClassLoader().getResourceAsStream("Images/20140624_130424_.jpg");
         InputStream file = fileURL;
 
